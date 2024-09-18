@@ -1,0 +1,56 @@
+Softmax: Converts raw scores into a probability distribution.
+
+        Input    -->   Exponentiate   -->   Normalize                   -->  Output
+
+Dog   -->[1      -->      [e**1       --> e**1/(e**1 + e**2 + e**3)     -->  [0.09
+Cat   --> 2      -->       e**2       --> e**2/(e**1 + e**2 + e**3)     -->   0.24
+Human --> 3]     -->       e**3]      --> e**3/(e**1 + e**2 + e**3)     -->   0.67]
+
+
+        Input    -->   (Exponentiat) +  (Normalize)   =     Softmax     -->  Output
+
+
+
+Dog   -->[1      -->      [e**1       --> e**1/(e**1 + e**2 + e**3)     -->  [0.09
+Cat   --> 2      -->       e**2       --> e**2/(e**1 + e**2 + e**3)     -->   0.24
+Human --> 3]     -->       e**3]      --> e**3/(e**1 + e**2 + e**3)     -->   0.67]
+
+
+
+Overflow error :
+
+
+One issue with Exponentiation np.exp is the explosion values as the input to np.exp grows. You can get easily massive number and also
+reach an Overflow
+
+How to prevent this
+
+u = u - maxu, subtract the max value in that layer, from all the values in that layer
+
+
+    [ 1,                      [1,                   [1-3             [ -2
+u =   2,  , maxu = 3  => u =   2,  -3       =        2-3       =       -1 
+      3]                       3]                    3-3]               0]
+                         
+
+So with this technique the range we achive that our values will be between (0, 1) and this is because the np.exp(0) = 1
+
+
+what is the impact though of subtracting the max value 
+
+
+ 
+    [ 0.3,                         [e**0.3,                     [1.4                           [e**0.3/(e**0.3 + e**0.1.3 + e**2.3)            [0.09
+u =   1.3,  ,              => u =   e**1.3,           =          3.7                =           e**1.3/(e**0.3 + e**0.1.3 + e**2.3)       =     0.24
+      2.3]                          e**2.3]                      10.0]                          e**2.3/(e**0.3 + e**0.1.3 + e**2.3)]            0.67]
+    
+
+
+
+     [ 0.3,                         [0.3,                     [e**-2,               [0.14,         [e**-2.0/(e**-2.0 + e**-1.0 + e**0.0)       [0.09
+u' =   1.3,  , maxu = 2.3  => u =    1.3,  -2.3       =        e**-1,       =        0.37,       =  e**-1.0/(e**-2.0 + e**-1.0 + e**0.0)    =   0.24
+       2.3]                          2.3]                      e**0.0]               1.00]           e**0.0/(e**-2.0 + e**-1.0 + e**0.0)]       0.67]
+
+
+
+exactly the same results but we prevend our selfs from reaching an overflow with just subtracting the max value 

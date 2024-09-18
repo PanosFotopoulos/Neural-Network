@@ -19,7 +19,7 @@ np.array(wieght).T =  [[ 0.2 ,  0.5 , -0.26],       ---> 4x3
                        [-0.5 ,  0.26,  0.17],
                        [  1.  , -0.5 ,  0.87]]
 
-•Step Three: Compute the dot prodocut for each element in the new patrix (output)
+•Step Three: Compute the dot-prodocut for each element in the new patrix (output)
 
 First Element of new Matrix (output):
     1st Row of input        [ 1.0,  2.0,  3.0,  2.5] 
@@ -71,3 +71,5 @@ Third Element of new Matrix (output):
                                          [ -0.608, -1.949 , -0.474 ]]
 
 
+
+Matix Multiplication

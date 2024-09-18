@@ -21,7 +21,10 @@ biases2= [-1, 2, -0.5]
 
 layer1_output= np.dot( inputs,np.array(wieghts).T) + biases
 layer2_output= np.dot( layer1_output,np.array(wieghts2).T) + biases2
-#layer3_output= np.dot( layer2_output,np.array(wieghts3).T) + biases3
+#.
+#.
+#.
+#layerN_output= np.dot( layerN_output,np.array(wieghtsN).T) + biasesN
 
 
 print(layer2_output)
