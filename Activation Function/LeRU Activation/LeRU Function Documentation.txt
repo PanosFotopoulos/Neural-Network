@@ -1,0 +1,13 @@
+'''
+How ReLU works!
+
+self.output = np.maximum(0,inputs)
+
+more simple:
+for i in inputs:
+    if i>0:
+        output.append(i)
+    elif i <=0:
+        output.append(0)
+
+'''

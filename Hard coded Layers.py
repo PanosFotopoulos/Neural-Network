@@ -24,7 +24,7 @@ layer2_output= np.dot( layer1_output,np.array(wieghts2).T) + biases2
 #.
 #.
 #.
-#layerN_output= np.dot( layerN_output,np.array(wieghtsN).T) + biasesN
+#layerN_output= np.dot( layerN_output,np.array(wieghtsN).T) + biasesΝ
 
 
 print(layer2_output)
