@@ -27,3 +27,5 @@ D. Activation Function: This functions transfrom the model into a non-linear mod
 Common activation functions include ReLU, Sigmoid, and Tanh.
 
 So the neuron (layer) input x = [x1, x2] * w = [w1, w2] + has the result z ( z = (xN*wN) + b) and then the Activation function gives the final layer output f(z)
+
+Since we got a first view of the idea behind everything lets deep dive to more specific things. Lets start with tensorflow and keras 
