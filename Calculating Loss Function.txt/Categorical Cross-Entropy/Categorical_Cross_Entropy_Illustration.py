@@ -4,7 +4,7 @@ softmax_output = [0.7, 0.1, 0.2]
 
 #target class = 0, that means the index 0 of softmax output is the "hot" or equals to one
 
-target_output = [1, 0, 0] # target destribution
+target_output = [1, 0, 0] # target destribution.
 
 loss1 = -(math.log(softmax_output[0])*(target_output[0]) +
          math.log(softmax_output[1])*(target_output[1]) +

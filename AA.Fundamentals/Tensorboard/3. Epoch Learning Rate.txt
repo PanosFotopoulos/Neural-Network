@@ -1,4 +1,4 @@
- Epoch Learning Rate (epoch_learning_rate)
+ Epoch Learning Rate (epoch_learning_rate).
 What it is: The learning rate value used during training for each epoch.
 How to interpret: If you are using a learning rate schedule (like decaying or adjusting learning rates over time), this will show how the learning rate changes per epoch.
 Use case: Helps in understanding how the learning rate is evolving, especially when you're using optimizers that adjust learning rates (like Adam or SGD with decay).

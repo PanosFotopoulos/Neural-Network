@@ -36,7 +36,7 @@ u =   2,  , maxu = 3  => u =   2,  -3       =        2-3       =       -1
 So with this technique the range we achive that our values will be between (0, 1) and this is because the np.exp(0) = 1
 
 
-what is the impact though of subtracting the max value 
+what is the impact though of subtracting the max value.
 
 
  

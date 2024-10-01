@@ -20,4 +20,4 @@ for value in exp_values:
 print(f'The probability distribution: {norm_values}')#The normalized values of exp_values are
 print(f'The sum of those are very close to 1: {sum(norm_values)}')
 
-#Move to part 2 in order to implement it in numpy
+#Move to part 2 in order to implement it in numpy.

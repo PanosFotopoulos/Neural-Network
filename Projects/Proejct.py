@@ -51,7 +51,7 @@ class Loss_CategoricalCrossEntropy(Loss):
         return negative_log_likelihoods
 
 '''
-1st case
+1st case.
 sample = 3 
 y_pred_clipped = np.array([[0.7,  0.1,  0.2],
                            [0.1,  0.5,  0.4]

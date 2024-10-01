@@ -52,6 +52,6 @@ e**4/(e**1 + e**2 + e**3),  e**5/(e**1 + e**2 + e**3),  e**6/(e**1 + e**2 + e**3
 e**6/(e**1 + e**2 + e**3),  e**8/(e**1 + e**2 + e**3),  e**9/(e**1 + e**2 + e**3)
 '''
 
-print(f'Normalized values are: {norm_values}')
+print(f'Normalized values are : {norm_values}')
 
 

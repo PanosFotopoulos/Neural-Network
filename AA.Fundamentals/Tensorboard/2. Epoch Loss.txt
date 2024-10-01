@@ -1,4 +1,4 @@
-Epoch Loss (epoch_loss)
+Epoch Loss (epoch_loss).
 What it is: The average loss (error) for your model for each epoch.
 How to interpret: A lower loss means your model is better at minimizing the error between its predictions and the true values.
 Use case: Tracking whether the models error is decreasing as training progresses. This is a key measure of model performance.

@@ -1,2 +1,2 @@
-Very import to visit 1st the One-hot Enconding (OneHotEconding.txt) senction and deeply understand it,since CCE is applyed to this the
-onehot vector and the prediction vector.
+Very import to visit 1st the One-hot Enconding (OneHotEconding.txt) senction and deeply understand it,
+since CCE is applyed to this the onehot vector and the prediction vector.

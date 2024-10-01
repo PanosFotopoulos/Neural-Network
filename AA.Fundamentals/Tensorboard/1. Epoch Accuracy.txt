@@ -2,3 +2,4 @@ Epoch Accuracy (epoch_accuracy)
 What it is: This represents the accuracy of your model for each epoch (the full pass over the training data).
 How to interpret: A higher value means your model is correctly classifying more data points. This is often used for classification problems.
 Use case: Monitoring how well the model is performing in terms of correctly predicting the labels for training data over time.
+

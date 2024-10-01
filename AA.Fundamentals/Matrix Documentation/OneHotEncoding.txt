@@ -1,4 +1,4 @@
-One-hot ecoding refering to a Vecotr of N classes Long and filled up with Zeros, except the index of the target class where you have 1
+One-hot ecoding refering to a Vecotr of N classes Long and filled up with Zeros, except the index of the target class where you have 1.
 Classes: 2 
 Label: 1
 One-Hot: [0, 1]

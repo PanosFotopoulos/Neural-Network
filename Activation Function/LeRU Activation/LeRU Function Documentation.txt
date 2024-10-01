@@ -1,5 +1,5 @@
 '''
-How ReLU works!
+How ReLU works!!
 
 self.output = np.maximum(0,inputs)
 

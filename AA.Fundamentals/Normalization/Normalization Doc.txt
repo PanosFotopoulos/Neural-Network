@@ -1,6 +1,6 @@
 What we mean by normalize the values?
 
-Single output neurons values devided by the sum of all of the other  output neurons in that output layer
+Single output neurons values devided by the sum of all of the other  output neurons in that output layer.
 
 u = [ 1,  <-- u1
       2]  <-- u2

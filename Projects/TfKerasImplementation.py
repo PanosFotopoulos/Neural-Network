@@ -4,12 +4,14 @@ import tensorflow as tf
 mnist = tf.keras.datasets.mnist 
 
 """
+
 Print dataset details 28x28 images of hand-written digits 0-9
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 print("Training data shape:", train_images.shape)
 print("Training labels shape:", train_labels.shape)
 print("Test data shape:", test_images.shape)
 print("Test labels shape:", test_labels.shape)
+
 """
 
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
