@@ -1,4 +1,4 @@
 Evaluation Accuracy vs Iterations (evaluation_accuracy_vs_iterations)
 What it is: This measures accuracy during model evaluation, plotted against the number of iterations (or batches).
 How to interpret: It helps monitor the performance of the model during the evaluation phase. A higher value means better accuracy.
-Use case: Helps assess how well the model is performing on validation data during or after training. It’s useful for checking overfitting or underfitting.
+Use case: Helps assess how well the model is performing on validation data during or after training. Its useful for checking overfitting or underfitting.

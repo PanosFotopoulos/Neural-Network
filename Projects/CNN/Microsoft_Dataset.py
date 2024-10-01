@@ -12,12 +12,12 @@ IMG_SIZE = 50
 training_data = []
 
 def create_training_data():
-    for catergory in CATEGORIES:
-        path = os.path.join(DATADIER, catergory)# gives the path to the respective dir
-        class_num = CATEGORIES.index(catergory)
+    for category in CATEGORIES:
+        path = os.path.join(DATADIER, category)# gives the path to the respective dir
+        class_num = CATEGORIES.index(category)
         for img in os.listdir(path):
             try:
-                img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_GRAYSCALE)
+                img_array = cv2.imread(os.path.join(path, img), cv2.IMREAD_GRAYSCALE)# join  to the path + image (in end folder) makes it gray and array from cv2
                 new_array = cv2.resize(img_array,(IMG_SIZE, IMG_SIZE)) # 50X50
                 training_data.append([new_array, class_num])
             except Exception as e:

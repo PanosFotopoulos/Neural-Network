@@ -1,0 +1,90 @@
+CNN are speciffically designed to work with image data. Making them the go-to model for tasks like image classification
+
+The basic CNN structure is as follows: Convolution -> Pooling -> Convolution -> Pooling -> Fully Connected Layer -> Output
+
+We take the image, we convert it to pixels 
+
+
+ ___________________
+| 1 | 0 | 3 | 1 | 0 |
+|-------------------|
+| 1 | 4 | 1 | 3 | 2 |
+|-------------------|
+| 1 | 4 | 1 | 2 | 2 |
+|-------------------|
+| 3 | 2 | 2 | 0 | 2 |
+ -------------------
+
+
+Convolutioon applies a filter to the input data to extract features like edges or textures. So this "sliding windows" compute a dot product
+between the filter and the region of the image it overlaps with
+
+Output: A feature map, where each pixel represents the response of a filter to a specific region of the input image.
+
+
+Relu is applied to the output of the convolution
+
+Now from the new important feature map we we will take a 3x3 polling window. The most common form of pooling is "max pooling".
+Where we simple take the maximum Value in the NxN window This helps to reduce the feature map,thereby decreasing the number of parameters and computation in the network, 
+which helps in mitigating overfitting. And finally becomes the new value of that region
+
+
+ ___________
+| 1 | 2 | 2 | 
+|-----------|
+| 1 | 0 | 3 |  so from this we get 4
+|-----------|
+| 1 | 4 | 1 |
+ -----------
+ ___________
+| 2 | 1 | 1 |
+|-----------|
+| 3 | 1 | 0 |  from this we get 3
+|-----------|                                                                
+| 1 | 3 | 2 | 
+ -----------                                                                 _______
+.                                                                           | 4 | 3 |   
+ ___________                                         So we have a window =  |-------|
+| 1 | 4 | 1 |                                                               | 4 | 3 |
+|-----------|                                                                -------
+| 1 | 4 | 1 |  from this we get 4
+|-----------|
+| 3 | 2 | 2 |
+ -----------
+ ___________ 
+| 1 | 3 | 2 |
+|-----------|
+| 1 | 2 | 2 |  and finally from this we get 3 
+|-----------|
+| 2 | 0 | 2 |
+ -----------
+
+
+
+Activation Functions (Sigmoid vs. ReLU):
+
+ReLU is a good choice because it allows the network to learn efficiently. When sigmoid is an activation function for most likely output layers because
+returns a probability (between 0 and 1) 
+
+
+CrossEntropy is a loss function used in classification tasks. 
+Measures the difference between the predicted probability distribution and the true distribution.
+
+Binary CrossEntropy: Used when have only Two classes (dogs & cats)
+
+Categorical CrossEntropy: Used when more than two classes
+
+
+Optimizer:
+
+Optimizer is another a method that model uses to update its Weights during training in order to minimize the loss function. A very popular Optimizer
+algorithm is Adam based on stochastic gradiant descent inculding features like adaptive learning rates and momentum
+making it more efficient for training deep networks 
+
+
+An easy way to picture the process is 
+
+
+input --> Image Data(X) 
+
+1st layer --> Conv2D for feature extractor + ReLU activation to learn non linear ++ Max pooling to reduce the dimensions
