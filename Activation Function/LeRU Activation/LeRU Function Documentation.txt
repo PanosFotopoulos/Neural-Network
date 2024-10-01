@@ -1,4 +1,4 @@
-'''
+
 How ReLU works!!
 
 self.output = np.maximum(0,inputs)
@@ -9,5 +9,3 @@ for i in inputs:
         output.append(i)
     elif i <=0:
         output.append(0)
-
-'''
